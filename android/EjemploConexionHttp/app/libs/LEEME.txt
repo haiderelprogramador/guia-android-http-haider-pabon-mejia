@@ -1,0 +1,1 @@
+# Copia aqui los .jar de la guia solo si no quieres usar las dependencias de Gradle

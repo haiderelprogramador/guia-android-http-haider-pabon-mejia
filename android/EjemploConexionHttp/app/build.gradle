@@ -1,0 +1,44 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'haiderpabon.guias.ejemploconexionhttp'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "haiderpabon.guias.ejemploconexionhttp"
+        minSdk 21
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    packaging {
+        resources {
+            excludes += ['META-INF/LICENSE*', 'META-INF/NOTICE*']
+        }
+    }
+}
+
+dependencies {
+    // Igual que en la guia: cualquier .jar que copies en la carpeta app/libs se incluye
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+
+    // Librerias de la guia (se descargan solas, no hace falta copiarlas a libs)
+    implementation 'commons-httpclient:commons-httpclient:3.1'   // Apache Commons HttpClient
+    implementation 'commons-codec:commons-codec:1.15'
+    implementation 'commons-logging:commons-logging:1.2'
+    implementation 'com.google.code.gson:gson:2.10.1'            // Google GSON
+}
