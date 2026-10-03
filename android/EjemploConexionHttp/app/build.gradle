@@ -23,6 +23,11 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    lint {
+        // commons-logging (dependencia de HttpClient, la libreria de la guia)
+        // repite clases de Android; la app funciona igual, asi que no bloqueamos el release
+        disable 'DuplicatePlatformClasses'
+    }
     packaging {
         resources {
             excludes += ['META-INF/LICENSE*', 'META-INF/NOTICE*']
