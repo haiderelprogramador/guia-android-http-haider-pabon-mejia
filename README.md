@@ -3,6 +3,12 @@
 
 Basado en la guía "Desarrollo de App Android conectadas a una aplicación web", de John Carlos Arrieta Arrieta.
 
+## Descargar la app (APK)
+APK firmado (release): [`apk/ConexionHttp-HaiderPabon-v1.0.apk`](apk/ConexionHttp-HaiderPabon-v1.0.apk)
+
+La app se conecta a `http://10.0.2.2/crudphpjson/crud/operacion.php` (el PC visto desde el emulador de Android Studio).
+Usuario de prueba: `haider@gmail.com` / `1234`.
+
 ## Qué hay en esta carpeta
 
 ```
